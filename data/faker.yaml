@@ -1,0 +1,108 @@
+---
+- - Address
+  - - Faker::Address.city
+    - Faker::Address.street_name
+    - Faker::Address.street_address
+    - Faker::Address.secondary_address
+    - Faker::Address.building_number
+    - Faker::Address.mail_box
+    - Faker::Address.community
+    - Faker::Address.zip_code
+    - Faker::Address.zip
+    - Faker::Address.postcode
+    - Faker::Address.time_zone
+    - Faker::Address.street_suffix
+    - Faker::Address.city_suffix
+    - Faker::Address.city_prefix
+    - Faker::Address.state
+    - Faker::Address.state_abbr
+    - Faker::Address.country
+    - Faker::Address.country_code
+    - Faker::Address.country_code_long
+    - Faker::Address.latitude
+    - Faker::Address.longitude
+    - Faker::Address.full_address
+- - Company
+  - - Faker::Company.name
+    - Faker::Company.suffix
+    - Faker::Company.industry
+    - Faker::Company.catch_phrase
+    - Faker::Company.buzzword
+    - Faker::Company.bs
+    - Faker::Company.ein
+    - Faker::Company.duns_number
+    - Faker::Company.logo
+    - Faker::Company.type
+    - Faker::Company.profession
+    - Faker::Company.swedish_organisation_number
+    - Faker::Company.czech_organisation_number
+    - Faker::Company.french_siren_number
+    - Faker::Company.french_siret_number
+    - Faker::Company.norwegian_organisation_number
+    - Faker::Company.australian_business_number
+    - Faker::Company.spanish_organisation_number
+    - Faker::Company.polish_taxpayer_identification_number
+    - Faker::Company.polish_register_of_national_economy
+    - Faker::Company.south_african_pty_ltd_registration_number
+    - Faker::Company.south_african_close_corporation_registration_number
+    - Faker::Company.south_african_listed_company_registration_number
+    - Faker::Company.south_african_trust_registration_number
+    - Faker::Company.brazilian_company_number
+    - Faker::Company.sic_code
+    - Faker::Company.russian_tax_number
+- - Date
+  - - Faker::Date.in_date_period
+- - Educator
+  - - Faker::Educator.university
+    - Faker::Educator.secondary_school
+    - Faker::Educator.primary_school
+    - Faker::Educator.degree
+    - Faker::Educator.course_name
+    - Faker::Educator.subject
+    - Faker::Educator.campus
+- - Gender
+  - - Faker::Gender.type
+    - Faker::Gender.binary_type
+    - Faker::Gender.short_binary_type
+- - Hobby
+  - - Faker::Hobby.activity
+- - Name
+  - - Faker::Name.name
+    - Faker::Name.name_with_middle
+    - Faker::Name.first_name
+    - Faker::Name.middle_name
+    - Faker::Name.male_first_name
+    - Faker::Name.female_first_name
+    - Faker::Name.last_name
+    - Faker::Name.prefix
+    - Faker::Name.suffix
+    - Faker::Name.initials
+- - Relationship
+  - - Faker::Relationship.familial
+    - Faker::Relationship.spouse
+    - Faker::Relationship.parent
+    - Faker::Relationship.in_law
+    - Faker::Relationship.sibling
+- - Vehicle
+  - - Faker::Vehicle.vin
+    - Faker::Vehicle.manufacture
+    - Faker::Vehicle.make
+    - Faker::Vehicle.model
+    - Faker::Vehicle.make_and_model
+    - Faker::Vehicle.color
+    - Faker::Vehicle.transmission
+    - Faker::Vehicle.drive_type
+    - Faker::Vehicle.fuel_type
+    - Faker::Vehicle.style
+    - Faker::Vehicle.car_type
+    - Faker::Vehicle.car_options
+    - Faker::Vehicle.standard_specs
+    - Faker::Vehicle.doors
+    - Faker::Vehicle.door_count
+    - Faker::Vehicle.engine_size
+    - Faker::Vehicle.engine
+    - Faker::Vehicle.year
+    - Faker::Vehicle.mileage
+    - Faker::Vehicle.kilometrage
+    - Faker::Vehicle.license_plate
+    - Faker::Vehicle.singapore_license_plate

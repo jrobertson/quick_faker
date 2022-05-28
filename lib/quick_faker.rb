@@ -6,43 +6,64 @@
 
 require 'yaml'
 require 'faker'
+require 'c32'
+require 'rxfreader'
+
 
 class QuickFaker
+  using ColouredText
 
-  def initialize(locale='en-GB')
+  attr_reader :a
 
+  def initialize(locale='en-GB', debug: false)
+
+    @debug = debug
     Faker::Config.locale = locale
     s = File.join(File.dirname(__FILE__), '..', 'data', 'faker.yaml')
+
     a = YAML.load(File.read(s))
+    @a = a.flat_map(&:last)
 
     load_methods(a)
 
   end
 
   def lookup(s, context=nil)
+
     found = @h[s.to_sym]
-    if found[0].is_a? Array
-      
+    puts 'found: ' + found.inspect if @debug
+
+    if found and found[0].is_a? Array
+
       h = found.map {|x| x.last[/[^:]+(?=\.)/].downcase.to_sym}.zip(found.map(&:first)).to_h
       if context then
-        h[context].call
+        h[context.to_sym].call
       elsif h.keys.include? :name
         h[:name].call
       else
-        raise 'provide context! options: ' + h.keys.map(&:to_s).join(', ')
+        raise 'provide context! options: ' + h.keys.map(&:to_s).join(', ') \
+            + "\n   try e.g. lookup(:#{s}, :#{h.keys.first})"
       end
-    else
+    elsif found
       found[0].call
+    else
+      puts ('*' + s.to_s + '* not found').warning
+      puts ('try: ').info
+      @a.grep /#{s}/i
     end
   end
 
   def lookup2(s)
 
     found = @h[s.to_sym]
-    if found[0].is_a? Array then
+    if found and found[0].is_a? Array then
       found.map(&:last)
-    else
+    elsif found[0]
       found.last
+    else
+      puts ('*' + s.to_s + '* not found').warning
+      puts ('try: ').info
+      @a.grep(/#{s}/i)[/[^\.]+$/].uniq.sort
     end
 
   end
@@ -58,7 +79,7 @@ class QuickFaker
     @h = {}
     a2.each do |rawname, a|
 
-      puts rawname + '...'
+      puts ('  reading ' + rawname + '...').info
 
       a.each do |mname|
 
@@ -84,5 +105,48 @@ class QuickFaker
       end
     end
   end
+
+  def method_missing(method_name, *args)
+    lookup(method_name, *args)
+  end
 end
 
+class FakerData
+
+  def initialize(topics=nil, filepath: '/tmp/faker.yaml')
+
+    topics ||= %w(Address Company Date Educator Gender Hobby Name Relationship Vehicle)
+    @url = 'https://raw.githubusercontent.com/faker-ruby/faker/master/doc/default/'
+    @topics, @filepath = topics, filepath
+
+  end
+
+  def build()
+
+    a2 = @topics.map do |rawname|
+
+      puts rawname + '...'
+      name = rawname.downcase
+      url = @url + name + '.md'
+      begin
+        s, _ = RXFReader.read url
+      rescue
+        next
+      end
+      a = s.scan(/Faker::#{rawname}\S+/)
+      a.reject! {|x| x[-1] == ':'}
+      [rawname, a]
+
+    end
+
+    File.write @filepath, a2.compact.to_yaml
+    puts 'written to ' + @filepath
+
+  end
+
+  # returns a list of topics
+  #'
+  def scrape(s)
+    s.scan(/(?<=:)\w+/)
+  end
+end

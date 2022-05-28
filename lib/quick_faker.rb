@@ -13,7 +13,7 @@ require 'rxfreader'
 class QuickFaker
   using ColouredText
 
-  attr_reader :a
+  attr_reader :a, :topics
 
   def initialize(locale='en-GB', debug: false)
 
@@ -22,6 +22,7 @@ class QuickFaker
     s = File.join(File.dirname(__FILE__), '..', 'data', 'faker.yaml')
 
     a = YAML.load(File.read(s))
+    @topics = a.to_h
     @a = a.flat_map(&:last)
 
     load_methods(a)
@@ -65,6 +66,21 @@ class QuickFaker
       puts ('try: ').info
       @a.grep(/#{s}/i)[/[^\.]+$/].uniq.sort
     end
+
+  end
+
+  def query(topic)
+    @topics[topic.to_s.capitalize]
+  end
+
+  def options(s=nil)
+
+    return query s if s
+
+    @h.map do |key, a|
+      a2 = a[0].is_a?(Array) ? a.map(&:last) : a.last
+      [key, a2]
+    end.sort_by(&:first)
 
   end
 

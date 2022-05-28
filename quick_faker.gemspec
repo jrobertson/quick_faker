@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'quick_faker'
-  s.version = '0.2.0'
+  s.version = '0.2.1'
   s.summary = 'Handy Faker wrapper for noobs too lazy to read the documentation.'
   s.authors = ['James Robertson']
   s.files = Dir['lib/quick_faker.rb', 'data/faker.yaml']

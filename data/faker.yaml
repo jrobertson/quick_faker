@@ -22,6 +22,114 @@
     - Faker::Address.latitude
     - Faker::Address.longitude
     - Faker::Address.full_address
+- - Alphanumeric
+  - []
+- - Ancient
+  - - Faker::Ancient.god
+    - Faker::Ancient.primordial
+    - Faker::Ancient.titan
+    - Faker::Ancient.hero
+- - App
+  - - Faker::App.name
+    - Faker::App.version
+    - Faker::App.author
+    - Faker::App.semantic_version
+- - Appliance
+  - - Faker::Appliance.brand
+    - Faker::Appliance.equipment
+- - Artist
+  - - Faker::Artist.name
+- - Avatar
+  - - Faker::Avatar.image
+- - Bank
+  - - Faker::Bank.account_number
+    - Faker::Bank.iban
+    - Faker::Bank.name
+    - Faker::Bank.routing_number
+    - Faker::Bank.swift_bic
+- - Barcode
+  - - Faker::Barcode.ean
+    - Faker::Barcode.ean(8)
+    - Faker::Barcode.ean(13)
+    - Faker::Barcode.ean_with_composite_symbology
+    - Faker::Barcode.ean_with_composite_symbology(8)
+    - Faker::Barcode.ean_with_composite_symbology(13)
+    - Faker::Barcode.upc_a
+    - Faker::Barcode.upc_a_with_composite_symbology
+    - Faker::Barcode.upc_e
+    - Faker::Barcode.upc_e_with_composite_symbology
+    - Faker::Barcode.isbn
+    - Faker::Barcode.ismn
+    - Faker::Barcode.issn
+- - Beer
+  - - Faker::Beer.brand
+    - Faker::Beer.name
+    - Faker::Beer.style
+    - Faker::Beer.hop
+    - Faker::Beer.yeast
+    - Faker::Beer.malts
+    - Faker::Beer.ibu
+    - Faker::Beer.alcohol
+    - Faker::Beer.blg
+- - Blood
+  - - Faker::Blood.type
+    - Faker::Blood.rh_factor
+    - Faker::Blood.group
+- - Boolean
+  - - Faker::Boolean.boolean
+- - Business
+  - - Faker::Business.credit_card_number
+    - Faker::Business.credit_card_expiry_date
+    - Faker::Business.credit_card_type
+- - Camera
+  - - Faker::Camera.brand
+    - Faker::Camera.model
+    - Faker::Camera.brand_with_model
+- - Cannabis
+  - - Faker::Cannabis.strain
+    - Faker::Cannabis.cannabinoid_abbreviation
+    - Faker::Cannabis.cannabinoid
+    - Faker::Cannabis.terpene
+    - Faker::Cannabis.medical_use
+    - Faker::Cannabis.health_benefit
+    - Faker::Cannabis.category
+    - Faker::Cannabis.type
+    - Faker::Cannabis.buzzword
+    - Faker::Cannabis.brand
+- - Code
+  - - Faker::Code.npi
+    - Faker::Code.isbn
+    - Faker::Code.ean
+    - Faker::Code.rut
+    - Faker::Code.nric
+    - Faker::Code.imei
+    - Faker::Code.asin
+    - Faker::Code.sin
+- - Coffee
+  - - Faker::Coffee.blend_name
+    - Faker::Coffee.origin
+    - Faker::Coffee.variety
+    - Faker::Coffee.notes
+    - Faker::Coffee.intensifier
+- - Coin
+  - - Faker::Coin.flip
+    - Faker::Coin.name
+- - Color
+  - - Faker::Color.hex_color
+    - Faker::Color.color_name
+    - Faker::Color.rgb_color
+    - Faker::Color.hsl_color
+    - Faker::Color.hsla_color
+- - Commerce
+  - - Faker::Commerce.color
+    - Faker::Commerce.department
+    - Faker::Commerce.material
+    - Faker::Commerce.product_name
+    - Faker::Commerce.price
+    - Faker::Commerce.promotion_code
+    - Faker::Commerce.material
+    - Faker::Commerce.brand
+    - Faker::Commerce.vendor
 - - Company
   - - Faker::Company.name
     - Faker::Company.suffix
@@ -50,8 +158,74 @@
     - Faker::Company.brazilian_company_number
     - Faker::Company.sic_code
     - Faker::Company.russian_tax_number
+- - Compass
+  - - Faker::Compass.direction
+    - Faker::Compass.cardinal
+    - Faker::Compass.ordinal
+    - Faker::Compass.half_wind
+    - Faker::Compass.quarter_wind
+    - Faker::Compass.abbreviation
+    - Faker::Compass.cardinal_abbreviation
+    - Faker::Compass.ordinal_abbreviation
+    - Faker::Compass.half_wind_abbreviation
+    - Faker::Compass.quarter_wind_abbreviation
+    - Faker::Compass.azimuth
+    - Faker::Compass.cardinal_azimuth
+    - Faker::Compass.ordinal_azimuth
+    - Faker::Compass.half_wind_azimuth
+    - Faker::Compass.quarter_wind_azimuth
+- - Computer
+  - - Faker::Computer.platform
+    - Faker::Computer.type
+    - Faker::Computer.os
+    - Faker::Computer.stack
+- - Construction
+  - - Faker::Construction.material
+    - Faker::Construction.subcontract_category
+    - Faker::Construction.heavy_equipment
+    - Faker::Construction.trade
+    - Faker::Construction.standard_cost_code
+    - Faker::Construction.role
+- - Cosmere
+  - - Faker::Cosmere.aon
+    - Faker::Cosmere.shard_world
+    - Faker::Cosmere.shard
+    - Faker::Cosmere.surge
+    - Faker::Cosmere.knight_radiant
+    - Faker::Cosmere.metal
+    - Faker::Cosmere.allomancer
+    - Faker::Cosmere.feruchemist
+    - Faker::Cosmere.herald
+    - Faker::Cosmere.spren
+- - Crypto
+  - - Faker::Crypto.md5
+    - Faker::Crypto.sha1
+    - Faker::Crypto.sha256
+    - Faker::Crypto.sha512
+- - Currency
+  - - Faker::Currency.name
+    - Faker::Currency.code
+    - Faker::Currency.symbol
 - - Date
   - - Faker::Date.in_date_period
+- - Demographic
+  - - Faker::Demographic.race
+    - Faker::Demographic.educational_attainment
+    - Faker::Demographic.demonym
+    - Faker::Demographic.marital_status
+    - Faker::Demographic.sex
+    - Faker::Demographic.height
+- - Dessert
+  - - Faker::Dessert.variety
+    - Faker::Dessert.topping
+    - Faker::Dessert.flavor
+- - Device
+  - - Faker::Device.build_number
+    - Faker::Device.manufacturer
+    - Faker::Device.model_name
+    - Faker::Device.platform
+    - Faker::Device.serial
+    - Faker::Device.version
 - - Educator
   - - Faker::Educator.university
     - Faker::Educator.secondary_school
@@ -60,12 +234,151 @@
     - Faker::Educator.course_name
     - Faker::Educator.subject
     - Faker::Educator.campus
+- - Emotion
+  - - Faker::Emotion.noun
+    - Faker::Emotion.adjective
+- - Esport
+  - - Faker::Esport.player
+    - Faker::Esport.team
+    - Faker::Esport.league
+    - Faker::Esport.event
+    - Faker::Esport.game
+- - File
+  - - Faker::File.extension
+    - Faker::File.mime_type
+    - Faker::File.dir
+- - Fillmurray
+  - - Faker::Fillmurray.image
+- - Finance
+  - - Faker::Finance.credit_card
+    - Faker::Finance.credit_card(:mastercard)
+    - Faker::Finance.credit_card(:mastercard,
+    - Faker::Finance.vat_number
+    - Faker::Finance.ticker
+    - Faker::Finance.ticker('NASDAQ')
+    - Faker::Finance.stock_market
+- - Food
+  - - Faker::Food.description
+    - Faker::Food.dish
+    - Faker::Food.ethnic_category
+    - Faker::Food.fruits
+    - Faker::Food.ingredient
+    - Faker::Food.measurement
+    - Faker::Food.metric_measurement
+    - Faker::Food.spice
+    - Faker::Food.sushi
+    - Faker::Food.vegetables
 - - Gender
   - - Faker::Gender.type
     - Faker::Gender.binary_type
     - Faker::Gender.short_binary_type
+- - Hacker
+  - - Faker::Hacker.say_something_smart
+    - Faker::Hacker.abbreviation
+    - Faker::Hacker.adjective
+    - Faker::Hacker.noun
+    - Faker::Hacker.verb
+    - Faker::Hacker.ingverb
+- - Hipster
+  - - Faker::Hipster.word
+    - Faker::Hipster.words
+    - Faker::Hipster.sentence
+    - Faker::Hipster.sentences
+    - Faker::Hipster.paragraph
+    - Faker::Hipster.paragraphs
+    - Faker::Hipster.paragraph_by_chars
 - - Hobby
   - - Faker::Hobby.activity
+- - House
+  - - Faker::House.furniture
+    - Faker::House.room
+- - Internet
+  - - Faker::Internet.user
+    - Faker::Internet.user('username',
+    - Faker::Internet.email
+    - Faker::Internet.free_email
+    - Faker::Internet.safe_email
+    - Faker::Internet.username
+    - Faker::Internet.password
+    - Faker::Internet.domain_name
+    - Faker::Internet.domain_word
+    - Faker::Internet.domain_suffix
+    - Faker::Internet.ip_v4_address
+    - Faker::Internet.private_ip_v4_address
+    - Faker::Internet.public_ip_v4_address
+    - Faker::Internet.ip_v4_cidr
+    - Faker::Internet.ip_v6_address
+    - Faker::Internet.ip_v6_cidr
+    - Faker::Internet.mac_address
+    - Faker::Internet.url
+    - Faker::Internet.slug
+    - Faker::Internet.user_agent
+    - Faker::Internet.uuid
+- - Invoice
+  - - Faker::Invoice.reference
+    - Faker::Invoice.creditor_reference
+- - Job
+  - - Faker::Job.title
+    - Faker::Job.field
+    - Faker::Job.seniority
+    - Faker::Job.position
+    - Faker::Job.key_skill
+    - Faker::Job.employment_type
+    - Faker::Job.education_level
+- - Json
+  - []
+- - Kpop
+  - - Faker::Kpop.i_groups
+    - Faker::Kpop.ii_groups
+    - Faker::Kpop.iii_groups
+    - Faker::Kpop.girl_groups
+    - Faker::Kpop.boy_bands
+    - Faker::Kpop.solo
+- - Lorem
+  - - Faker::Lorem.word
+    - Faker::Lorem.words
+    - Faker::Lorem.multibyte
+    - Faker::Lorem.characters
+    - Faker::Lorem.sentence
+    - Faker::Lorem.sentences
+    - Faker::Lorem.paragraph
+    - Faker::Lorem.paragraphs
+    - Faker::Lorem.question
+    - Faker::Lorem.paragraph_by_chars
+- - Markdown
+  - - Faker::Markdown.headers
+    - Faker::Markdown.emphasis
+    - Faker::Markdown.ordered_list
+    - Faker::Markdown.unordered_list
+    - Faker::Markdown.inline_code
+    - Faker::Markdown.block_code
+    - Faker::Markdown.table
+    - Faker::Markdown.random
+    - Faker::Markdown.random("table")
+    - Faker::Markdown.random("ordered_list",
+    - Faker::Markdown.sandwich
+- - Marketing
+  - - Faker::Marketing.buzzwords
+- - Measurement
+  - - Faker::Measurement.height
+    - Faker::Measurement.length
+    - Faker::Measurement.volume
+    - Faker::Measurement.weight
+    - Faker::Measurement.metric_height
+    - Faker::Measurement.metric_length
+    - Faker::Measurement.metric_volume
+    - Faker::Measurement.metric_weight
+- - Military
+  - - Faker::Military.army_rank
+    - Faker::Military.marines_rank
+    - Faker::Military.navy_rank
+    - Faker::Military.air_force_rank
+    - Faker::Military.space_force_rank
+    - Faker::Military.coast_guard_rank
+    - Faker::Military.dod_paygrade
+- - Mountain
+  - - Faker::Mountain.name
+    - Faker::Mountain.range
 - - Name
   - - Faker::Name.name
     - Faker::Name.name_with_middle
@@ -77,12 +390,120 @@
     - Faker::Name.prefix
     - Faker::Name.suffix
     - Faker::Name.initials
+- - Nation
+  - - Faker::Nation.nationality
+    - Faker::Nation.language
+    - Faker::Nation.capital_city
+    - Faker::Nation.national_sport
+    - Faker::Nation.flag
+- - Number
+  - - Faker::Number.positive
+    - Faker::Number.negative
+    - Faker::Number.non_zero_digit
+    - Faker::Number.digit
+- - Omniauth
+  - - Faker::Omniauth.google
+    - Faker::Omniauth.facebook
+    - Faker::Omniauth.twitter
+    - Faker::Omniauth.linkedin
+    - Faker::Omniauth.github
+    - Faker::Omniauth.apple
+    - Faker::Omniauth.auth0
+- - Placeholdit
+  - - Faker::Placeholdit.image
 - - Relationship
   - - Faker::Relationship.familial
     - Faker::Relationship.spouse
     - Faker::Relationship.parent
     - Faker::Relationship.in_law
     - Faker::Relationship.sibling
+- - Restaurant
+  - - Faker::Restaurant.name
+    - Faker::Restaurant.type
+    - Faker::Restaurant.description
+    - Faker::Restaurant.review
+- - Science
+  - - Faker::Science.science
+    - Faker::Science.science(:natural,
+    - Faker::Science.science(:formal,
+    - Faker::Science.element
+    - Faker::Science.element_symbol
+    - Faker::Science.element_state
+    - Faker::Science.element_subcategory
+    - Faker::Science.scientist
+    - Faker::Science.scientist
+    - Faker::Science.modifier
+    - Faker::Science.tool
+- - Source
+  - - Faker::Source.hello_world
+    - Faker::Source.print
+    - Faker::Source.print_1_to_10
+- - Space
+  - - Faker::Space.planet
+    - Faker::Space.moon
+    - Faker::Space.galaxy
+    - Faker::Space.nebula
+    - Faker::Space.star_cluster
+    - Faker::Space.constellation
+    - Faker::Space.star
+    - Faker::Space.agency
+    - Faker::Space.agency_abv
+    - Faker::Space.nasa_space_craft
+    - Faker::Space.company
+    - Faker::Space.distance_measurement
+    - Faker::Space.meteorite
+    - Faker::Space.launch_vehicle
+- - String
+  - - Faker::String.random
+- - Stripe
+  - - Faker::Stripe.valid_card
+    - Faker::Stripe.valid_token
+    - Faker::Stripe.invalid_card
+    - Faker::Stripe.month
+    - Faker::Stripe.year
+    - Faker::Stripe.ccv
+- - Subscription
+  - - Faker::Subscription.plan
+    - Faker::Subscription.status
+    - Faker::Subscription.payment_method
+    - Faker::Subscription.subscription_term
+    - Faker::Subscription.payment_term
+- - Superhero
+  - - Faker::Superhero.name
+    - Faker::Superhero.power
+    - Faker::Superhero.prefix
+    - Faker::Superhero.suffix
+    - Faker::Superhero.descriptor
+- - Tea
+  - - Faker::Tea.variety
+    - Faker::Tea.type
+- - Team
+  - - Faker::Team.creature
+    - Faker::Team.name
+    - Faker::Team.state
+    - Faker::Team.sport
+    - Faker::Team.mascot
+- - Time
+  - []
+- - Twitter
+  - - Faker::Twitter.user
+    - Faker::Twitter.status
+    - Faker::Twitter.screen_name
+- - Types
+  - - Faker::Types.rb_string
+    - Faker::Types.character
+    - Faker::Types.rb_integer
+    - Faker::Types.rb_hash
+    - Faker::Types.complex_rb_hash
+    - Faker::Types.rb_array
+    - Faker::Types.random_type
+    - Faker::Types.random_complex_type
+- - University
+  - - Faker::University.name
+    - Faker::University.prefix
+    - Faker::University.suffix
+    - Faker::University.greek_organization
+    - Faker::University.greek_alphabet
 - - Vehicle
   - - Faker::Vehicle.vin
     - Faker::Vehicle.manufacture
@@ -106,3 +527,5 @@
     - Faker::Vehicle.kilometrage
     - Faker::Vehicle.license_plate
     - Faker::Vehicle.singapore_license_plate
+- - Verbs
+  - []
